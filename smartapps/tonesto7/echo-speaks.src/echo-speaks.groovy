@@ -246,7 +246,7 @@ def servPrefPage() {
             if(!authValid) {
                 section(sTS("Authentication:")) {
                     paragraph pTS("You still need to Login to Amazon to complete the setup", null, true, "red"), required: true, state: null
-                    if(getServerItem("onHeroku")) {
+                    if(getServerItem("IonHeroku")) {
                         href url: "https://${getRandAppName()}.herokuapp.com/config", style: "external", required: false, title: inTS("Amazon Login Page", getAppImg("amazon_orange", true)), description: "Tap to proceed", image: getAppImg("amazon_orange")
                     } else if (getServerItem("isLocal")) {
                         href url: "${getServerHostURL()}/config", style: "external", required: false, title: inTS("Amazon Login Page", getAppImg("amazon_orange", true)), description: "Tap to proceed", image: getAppImg("amazon_orange")
